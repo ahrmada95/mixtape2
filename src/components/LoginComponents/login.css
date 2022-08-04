@@ -21,15 +21,16 @@
 } */
 
 #login-background {
-    height: 100vh; /*height of current browser window*/
-    width: 100vw; /*width of current browser window*/
-    z-index: -2;
+    height: 100vh;
+    width: 100vw; 
+    z-index: 1;
     overflow: hidden;
     position: relative;
     background-color: black;
 }
 
-#login-video { /*video settings*/
+ /*video settings*/
+#login-video {
     filter: blur(15px);
     position: absolute;
     width: 125%;
@@ -42,7 +43,7 @@
     width: 100vw;
     position: absolute;
     display: flex;
-    z-index: 0;
+    z-index: -1;
     flex-direction: row;
     justify-content: flex-end;
 }
@@ -55,7 +56,7 @@
     height: 100vh;
     width: 60%;
     z-index: 1;
-    background-color: rgba(101, 48, 136,1);
+    background-color: rgba(57, 21, 82, 0.9);
     box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.64);
 }
 
@@ -71,14 +72,17 @@
 }
 
 #form-container {
+    padding-top: 60px;
+    padding-left: 60px;
     flex: 2;
 }
 
 #login-form {
-    z-index: 10;
+    position: absolute;
+    z-index: 10   
 }
 
-/* #user-label {
+#user-label {
     font-family: form-labels;
     font-size: 20px;
     color: white;
@@ -90,10 +94,68 @@
     color: white;
 }
 
+.input-field-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input-field-icon {
+    max-width: 46px;
+    max-height: 46px;
+    margin: 0px;
+}
+
 input[type=text], input[type=password] {
-    width: 75%;
-    margin: 8px;
-    padding: 12px 20px;
+    font-family: form-labels;
+    width: 600px;
+    padding: 15px 20px 15px;
     display: inline-block;
     font-size: 15px;
-} */
+    border: none;
+}
+
+#remember-login {
+    font-family: form-labels;
+    font-size: 15px;
+    margin-top: 40px;
+    color: white;
+}
+
+#login-btn {
+    height: 75px;
+    width: 200px;
+    border: none;
+    font-family: login-screen-title;
+    font-size: 30px;
+    margin-top: 50px;
+    color: white;
+    background-color: var(--mix_blue);
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+#login-btn:hover {
+    background-image: linear-gradient(to left, #f67cc9, #fa6db7, #fc5da4, #fd4d90, #fc3c7a, #fb307a, #fa207b, #f9007c, #f30097, #e500b4, #cd1ad3, #a53af1);
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+#forgot-btn {
+    height: 25px;
+    width: 400px;
+    margin-top: 25px;
+    padding: 5px 5px 5px 5px;
+    font-family: form-labels;
+    background-color: rgba(96, 58, 241, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+#forgot-btn:hover {
+    background-color: white;
+    color: var(--mix_red);
+    transition-duration: 0.1s;
+}

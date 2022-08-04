@@ -1,10 +1,9 @@
 import Login from "./components/LoginComponents/Login";
-import './index.css'
 
 function App() {
   
   return (
-    <div id='null'>  
+    <div >  
       <Login />
     </div>
   );

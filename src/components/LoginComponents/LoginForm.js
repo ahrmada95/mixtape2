@@ -1,27 +1,23 @@
-
-import React, {useState} from "react";
 const LoginForm = () => {
-
-
-
-    const [testState, setTestState] = useState(1)
-
-    const handleSubmit = (e) => {
-        setTestState(0);
-    }
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <label id='user-label'>Username:</label>
-                <br/>
-                <input type='text' name='username' id='user-box' placeholder="Enter Username"/>
-                <br/>
-                <br/>
-                <br/>
-                <label id='pass-label'>Password:</label>
-                <br/>
-                <input type='password' name='password' id='pass-box' placeholder="Enter Password"/>
+            <form id='login-form'>
+                <label id='user-label'>Username:</label> <br/>
+                <div className="input-field-container">
+                    <img src="./assets/images/user_icon.png" className="input-field-icon"/>
+                    <input type='text' name='username' id='user-box' placeholder="Enter Username"/>
+                </div> <br/><br/><br/>
+
+                <label id='pass-label'>Password:</label><br/>
+                <div className="input-field-container">
+                    <img src="./assets/images/password_icon.png" className="input-field-icon"/>
+                    <input type='password' name='password' id='pass-box' placeholder="Enter Password"/>
+                </div>
+                <input type="checkbox" id="remember-login" name="remember-login"/>
+                <label htmlFor="remember-login" id="remember-login">Remember Me</label><br/>
+                <button type="submit" id='login-btn'>Login</button><br/>
+                <button id='forgot-btn'>Forgot Username or Password?</button>
             </form>
         </>
     )
