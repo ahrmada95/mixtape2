@@ -1,0 +1,99 @@
+:root {
+    --mix_purple: rgb(165, 58, 241);
+    --mix_red: rgb(247, 36, 91);
+    --mix_pink: rgb(245, 109, 195);
+    --mix_blue: rgb(128, 222, 243);
+  }
+
+@font-face {
+    font-family: login-screen-title;
+    src: url("~/public/assets/fonts/GothamBold.ttf")
+} 
+
+@font-face {
+    font-family: form-labels;
+    src: url("~/public/assets/fonts/GothamBook.ttf")
+}
+
+/* @font-face {
+    font-family: form-text;
+    src: url("../public/assets/fonts/Gotham-XLight.otf")
+} */
+
+#login-background {
+    height: 100vh; /*height of current browser window*/
+    width: 100vw; /*width of current browser window*/
+    z-index: -2;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+#login-video { /*video settings*/
+    filter: blur(15px);
+    position: absolute;
+    width: 125%;
+    top: -200px;
+    z-index: -1;
+}
+
+#login-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    z-index: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#login-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-self: flex-end;
+    height: 100vh;
+    width: 60%;
+    z-index: 1;
+    background-color: rgba(101, 48, 136,1);
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.64);
+}
+
+#title-container {
+    display: flex;
+    flex: 1;
+    padding-left: 60px;
+    align-items: center;
+}
+
+#title-img {
+    max-height: 90px;
+}
+
+#form-container {
+    flex: 2;
+}
+
+#login-form {
+    z-index: 10;
+}
+
+/* #user-label {
+    font-family: form-labels;
+    font-size: 20px;
+    color: white;
+}
+
+#pass-label {
+    font-family: form-labels;
+    font-size: 20px;
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 75%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    font-size: 15px;
+} */
