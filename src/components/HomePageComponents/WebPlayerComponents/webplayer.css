@@ -1,0 +1,258 @@
+
+@font-face {
+    font-family: list-pane-title;
+    src: url("~/public/assets/fonts/Gotham-XLight.otf")
+} 
+
+
+#player-album-art {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))
+}
+
+#album-art-attract{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#album-art-img {
+    max-width: 420px;
+}
+
+#album-art-bottom-row{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#album-art-details {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    color: white;
+    justify-content: center;
+}
+
+#song-name {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 0;
+}
+
+#song-artist {
+    font-size: 13px;
+    color: white;
+}
+
+#album-art-controls {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#timer {
+    margin: 0;
+    color: white;
+    font-family: list-pane-title;
+}
+
+#scrubber {
+    width: 400px;
+}
+
+#button-layer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-btn-small {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 0px 5px 0px 5px;
+    position: relative;
+    top: 20px;
+    transition-duration: 0.1s;
+}
+
+.control-btn-small:hover {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+
+.control-btn-large {
+    max-width: 70px;
+    max-height: 70px;
+    margin: 0px 5px 0px 5px;
+    position: relative;
+    top: 20px;
+    transition-duration: 0.1s;
+}
+
+.control-btn-large:hover {
+    transform: scale(1.2);
+    transition-duration: 0.1s;
+}
+
+#album-art-share {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-list-pane{
+    flex: 3;
+    background-color: black
+}
+
+#share_icon {
+    transition-duration: 0.3s;
+    max-width: 70px;
+    max-height: 70px ;
+}
+
+#share_icon:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+}
+
+#share_icon:active {
+    transition-duration: 0;
+    transform: scale(0.5);
+    transform: scale(1);
+}
+
+@keyframes animate {
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+    }
+    40%{
+        box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 40px rgba(0,206,209,0);
+    }
+    100%{
+        box-shadow: 0 0 0 rgba(0,206,209,0);
+    }
+}
+
+.circleBase {
+    display: flex;
+    border-radius: 100%;
+    max-width: 40px;
+    max-height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleBase:hover {
+    transition-duration: 0.1s;
+    animation: animate 2s linear infinite;
+}
+
+
+#librarylinetitle { 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    font-family: list-pane-title;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 30px;
+    
+}
+
+.libraryline{ 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    
+}
+
+.line-number {
+    flex: 1;
+    margin: auto;
+    cursor: pointer;
+}
+
+#title-line-number {
+    flex: 1;
+    margin: auto;
+    cursor: default;
+}
+
+.song-name {
+    flex: 9;
+    margin: auto;
+    cursor: pointer;
+}
+
+#title-song-name {
+    flex: 9;
+    margin: auto;
+    cursor: default;
+}
+
+
+.time {
+    flex: 3;
+    margin: auto;
+    cursor: pointer;
+}
+
+#title-time {
+    flex: 3;
+    margin: auto;
+    cursor: default;
+}
+
+.artist {
+    flex: 5;
+    margin: auto;
+    cursor: pointer;
+}
+
+#title-artist {
+    flex: 5;
+    margin: auto;
+    cursor: default;
+}
+
+.album {
+    flex: 4;
+    margin: auto;
+    cursor: pointer
+}
+
+#title-album {
+    flex: 4;
+    margin: auto;
+    cursor: default
+}
