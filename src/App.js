@@ -1,3 +1,6 @@
+import React, {useState} from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+
 import Login from "./components/LoginComponents/Login";
 import HomePage from "./components/HomePageComponents/HomePage"
 
@@ -16,10 +19,11 @@ if(localStorage.getItem('USER_ID') === 0){
 function App() {
   
   return (
-    <div id="background">  
-      {/* <Login /> */}
-      <HomePage />
+    <Route exact path="/">
+    <div id="background">
+        <Login />
     </div>
+    </Route>  
   );
 }
 
