@@ -1,5 +1,12 @@
 import React, {useState} from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 import Login from "./components/LoginComponents/Login";
 import HomePage from "./components/HomePageComponents/HomePage"
@@ -13,17 +20,22 @@ localStorage.setItem('CURR_SONG', './music/All The Rage.mp3');
 //setting user id for caching
 if(localStorage.getItem('USER_ID') === 0){
   localStorage.setItem('USER_ID', JSON.stringify(0)); //set to default value for server
-}
+} 
 
 
 function App() {
-  
+
   return (
-    <Route exact path="/">
-    <div id="background">
-        <Login />
-    </div>
-    </Route>  
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route exact path="/home">
+          <HomePage />
+        </Route>
+      </Switch>
+    </Router> 
   );
 }
 

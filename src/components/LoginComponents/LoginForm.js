@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const LoginForm = () => {
     //state to hold list of all users
     const [users, setUsers] = useState([])
+    const history = useHistory();
 
     //run at start to set list of users
     useEffect ( () => {
         const fetchUsers = async () => {
-            const req = await fetch('http://localhost:4001/user/credentials/all');
+            const req = await fetch('http://localhost:3000/usersCred');
             const res = await req.json();
             setUsers(res);
         }
@@ -30,7 +32,7 @@ const LoginForm = () => {
     //handle login event
     const handleLogIn = async(event) => {
         event.preventDefault();
-        const req = await fetch('http://localhost:4001/user/credentials/all');
+        const req = await fetch('http://localhost:3000/usersCred');
         const res = await req.json();
         setUsers(res);
 
@@ -38,6 +40,7 @@ const LoginForm = () => {
             var today = new Date(),
             time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
             console.log(time, '- LOGIN EVENT: Successful login!')
+            history.push("/home");
         } else {
             alert('Invalid Username or Password!');
         }
